@@ -30,8 +30,7 @@
             <p>Ready to start your web or video project? Let's talk!</p>
         </section>
         <section class="contact-form-section">
-            <form class="contact-form">
-                <form action="https://formspree.io/f/mqabybbz" method="POST" class="contact-form">
+            <form action="https://formspree.io/f/mqabybbz" method="POST" class="contact-form" onsubmit="return checkRecaptcha();">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -41,14 +40,25 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 
+                <!-- reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LepkmorAAAAAMsLoHwBHKWcwRLvUoaA1crz0wpx"></div>
+                <div id="recaptcha-error">Please verify that you are not a robot.</div>
+                
                 <button type="submit" class="btn">Send Message</button>
-                 <!-- reCAPTCHA widget -->
-             <div class="g-recaptcha" data-sitekey="6LepkmorAAAAAMsLoHwBHKWcwRLvUoaA1crz0wpx"></div>
-        </form>
-        <!-- Load the reCAPTCHA-->
-         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    </section>
             </form>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script>
+                function checkRecaptcha() {
+                    var response = grecaptcha.getResponse();
+                    if (response.length === 0) {
+                        document.getElementById('recaptcha-error').style.display = 'block';
+                        return false; // Prevent form submission
+                    } else {
+                        document.getElementById('recaptcha-error').style.display = 'none';
+                        return true;
+                    }
+                }
+            </script>
             <div class="formal-info">
                 <h2>Business Contact</h2>
                 <p><strong>Email:</strong> acs.creatives@gmail.com</p>
