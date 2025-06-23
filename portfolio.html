@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ACS Creatives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="ASC logo.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+
+    <header>
+        <div class="logo">🎬 ACS Creatives</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portfolio-hero">
+            <h1>Our Portfolio</h1>
+            <p>Explore our favorite web design and videography projects.</p>
+        </section>
+        <section class="video-container">
+            <div class="video-card">
+                <video src="assets/videos/website-showcase.mp4" controls poster="assets/images/website.jpg"></video>
+                <h3>Modern Website Design</h3>
+            </div>
+            <div class="video-card">
+                <video src="assets/videos/corporate.mp4" controls poster="assets/images/corporate.jpg"></video>
+                <h3>Corporate Promo Video</h3>
+            </div>
+            <div class="video-card">
+                <video src="assets/videos/event.mp4" controls poster="assets/images/event.jpg"></video>
+                <h3>Event Highlights</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ACS Creatives. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

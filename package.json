@@ -1,0 +1,21 @@
+{
+  "name": "videography-website",
+  "version": "1.0.0",
+  "description": "A website showcasing the experiences and vision of a videography business.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "videography",
+    "portfolio",
+    "business"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
