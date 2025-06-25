@@ -17,9 +17,8 @@ header {
 }
 
 .logo {
-    font-size: 2em;
-    font-weight: bold;
-    padding: 20px 0 0 0;
+    font-size: 1.5em;
+    padding: 16px 0 0 0;
     text-align: center;
     letter-spacing: 2px;
 }
@@ -31,6 +30,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -50,21 +50,21 @@ nav a.active, nav a:hover {
 .hero {
     color: #fff;
     text-align: center;
-    padding: 160px 20px 100px 20px;
+    padding: 80px 10px 60px 10px;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 24px rgba(34,34,59,0.08);
     position: relative;
-    min-height: 400px;
+    min-height: 280px;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0.3em;
     letter-spacing: 1px;
 }
 
 .hero p {
-    font-size: 1.3em;
+    font-size: 1em;
     margin-bottom: 1.5em;
 }
 
@@ -88,21 +88,23 @@ nav a.active, nav a:hover {
 
 .features {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin: 40px 0;
+    gap: 24px;
+    margin: 24px 0;
     text-align: center;
 }
 
 .features > div {
     background: #fff;
-    padding: 30px 25px;
+    padding: 20px 12px;
     border-radius: 15px;
     box-shadow: 0 2px 12px rgba(34,34,59,0.07);
     flex: 1 1 250px;
-    min-width: 250px;
-    max-width: 350px;
+    min-width: unset;
+    max-width: 100%;
+    margin: 0 0 16px 0;
 }
 
 .features ul {
@@ -281,12 +283,12 @@ nav a.active, nav a:hover {
 }
 footer {
     text-align: center;
-    padding: 18px 0;
+    padding: 12px 0;
     background: #22223b;
     color: #fff;
     margin-top: 40px;
-    border-radius: 30px 30px 0 0;
-    font-size: 1em;
+    border-radius: 18px 18px 0 0;
+    font-size: 0.95em;
 }
 
 .hero-cover {
@@ -313,6 +315,12 @@ footer {
     object-fit: cover;
     opacity: 0.35; /* Adjust for readability */
     background: #222;
+/* Add your existing styles here */
+}
+#recaptcha-error {
+    color: #e63946;
+    margin-top: 10px;
+    display: none;
 }
 
 .bg-overlay {
@@ -325,11 +333,36 @@ footer {
 }
 
 @media (max-width: 900px) {
-    .features, .about-details {
+    nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
-    .video-container {
-        flex-direction: column;
+    .hero {
+        padding: 60px 5vw 40px 5vw;
+    }
+    .features {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.1em;
+        padding: 10px 0 0 0;
+    }
+    .hero h1 {
+        font-size: 1.3em;
+    }
+    .hero {
+        padding: 40px 2vw 24px 2vw;
+    }
+    .features > div {
+        padding: 12px 6px;
+        font-size: 0.98em;
+    }
+    footer {
+        font-size: 0.85em;
+        padding: 8px 0;
     }
 }
