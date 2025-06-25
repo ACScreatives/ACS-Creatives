@@ -366,3 +366,93 @@ footer {
         padding: 8px 0;
     }
 }
+@media (max-width: 1200px) {
+    .contact-form-section,
+    .formal-form-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+    .formal-info {
+        margin-left: 0;
+        margin-bottom: 24px;
+        margin-top: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+/* For desktop: stack .formal-info above the form */
+.formal-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+.formal-info {
+    margin-left: 0;
+    margin-bottom: 24px;
+    margin-top: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive layout for contact section */
+.formal-form-section,
+.contact-form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px; /* space between business contact and form */
+    margin: 48px 0;
+    flex-wrap: wrap;
+}
+
+/* Business contact info box */
+.formal-info {
+    min-width: 260px;
+    max-width: 340px;
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 1.08em;
+    text-shadow: 0 2px 8px rgba(34,34,59,0.18);
+    margin: 0;
+}
+
+/* Contact form box */
+.formal-form,
+.contact-form {
+    min-width: 320px;
+    max-width: 400px;
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: #1a1a1a;
+    margin: 0;
+}
+
+/* Stack vertically and center on tablets/phones */
+@media (max-width: 900px) {
+    .formal-form-section,
+    .contact-form-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+    .formal-info,
+    .contact-form {
+        margin: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+}
